@@ -1,0 +1,88 @@
+{
+  "commands": [
+    {
+      "name": "Lock Screen",
+      "category": "System",
+      "description": "Go to the lock screen.",
+      "keywords": ["1", "lock", "close", "logout", "security"],
+      "type": "lock-screen"
+    },
+    {
+      "name": "SSH PI",
+      "category": "Servers",
+      "description": "Open a terminal and SSH into your Raspberry Pi running Pi-hole, Tailscale, and the webpage.",
+      "keywords": ["ssh", "pi", "raspberry pi", "remote access"],
+      "type": "command",
+      "command": ["ssh", "pi@100.66.64.35"],
+      "terminal": true
+    },
+    {
+      "name": "Open VS Code",
+      "description": "Open Visual Studio Code.",
+      "category": "Applications",
+      "keywords": ["vscode", "code", "editor", "ide"],
+      "type": "command",
+      "command": ["code"],
+      "terminal": false
+    },
+    {
+      "name": "Fancy Tiles",
+      "description": "Open the Cinnamon Fancy Tiles extension (Super+G).",
+      "category": "Shortcuts",
+      "keywords": ["fancy", "tiles", "super+G", "shortcut"],
+      "type": "keystroke",
+      "keys": "super+G",
+      "env": ["Mint", "Cinnamon"]
+    },
+    {
+      "name": "Open Palette Folder",
+      "description": "Open the folder containing commands.json and palette.py.",
+      "category": "Files",
+      "keywords": ["palette", "command"],
+      "type": "directory",
+      "path": "~/.config/command-palette"
+    },
+    {
+      "name": "Open .local Folder",
+      "description": "Open the .local bin folder containing user scripts.",
+      "category": "Files",
+      "keywords": ["local", "systemd", "daemon", "services"],
+      "type": "directory",
+      "path": "~/.local/bin"
+    },
+    {
+      "name": "Open Tile Snapper Folder",
+      "description": "Open the folder containing the Cinnamon tile snapper extension.",
+      "category": "Files",
+      "keywords": ["tile", "snapper", "script", "folder"],
+      "type": "directory",
+      "path": "~/.local/share/cinnamon/extensions/snap_assist@ethan",
+      "env": ["Mint", "Cinnamon"]
+    },
+    {
+      "name": "Open Extensions Folder",
+      "description": "Open the folder containing Cinnamon extensions.",
+      "category": "Files",
+      "keywords": ["extensions", "folder", "cinnamon", "tile", "snapper", "window"],
+      "type": "directory",
+      "path": "~/.local/share/cinnamon/extensions",
+      "env": ["Mint", "Cinnamon"]
+    },
+    {
+      "name": "Restart NetworkManager",
+      "description": "Restart NetworkManager when the network goes down.",
+      "category": "System",
+      "keywords": ["internet", "network", "manager", "system"],
+      "type": "command",
+      "terminal": false,
+      "command": ["pkexec", "systemctl", "restart", "NetworkManager"]
+    },
+    {
+      "name": "Restart Command Palette",
+      "description": "Restart the running command palette after changing its Python code.",
+      "category": "System",
+      "keywords": ["command", "palette", "restart", "system"],
+      "type": "restart-palette"
+    }
+  ]
+}

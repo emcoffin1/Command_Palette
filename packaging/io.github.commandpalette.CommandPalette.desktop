@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Command Palette
+Comment=Search and run personal commands
+Exec=@BIN_HOME@/command-palette
+Icon=system-run
+Terminal=false
+Categories=Utility;
+StartupNotify=true
