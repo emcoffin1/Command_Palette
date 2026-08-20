@@ -15,6 +15,7 @@ gi.require_version("Gdk", "3.0")
 from gi.repository import Gdk, Gio, GLib, Gtk
 
 APP_ID = "io.github.commandpalette.CommandPalette"
+ICON_NAME = "system-run"
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_DIR = os.path.join(os.environ.get("XDG_CONFIG_HOME", os.path.expanduser("~/.config")), "command-palette")
 COMMAND_FILE = os.path.join(CONFIG_DIR, "commands.json")
@@ -67,6 +68,7 @@ def lock_command():
 class CommandPalette(Gtk.ApplicationWindow):
     def __init__(self, application):
         super().__init__(application=application, title="Command Palette")
+        self.set_icon_name(ICON_NAME)
         self.set_default_size(480, 360)
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_decorated(False)

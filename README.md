@@ -2,6 +2,8 @@
 
 A keyboard-first GTK 3 command palette for Linux. It supports Linux Mint Cinnamon on X11 and KDE Plasma on Wayland or X11.
 
+The window and application launcher use the desktop theme's `system-run` icon, so the icon follows both KDE and Cinnamon themes without bundling a separate image.
+
 The application uses `Gtk.Application` single-instance activation, chooses an installed terminal automatically, uses desktop-independent screen locking, and refuses X11-only keystroke simulation when running on Wayland.
 
 ## Requirements
