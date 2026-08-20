@@ -7,3 +7,4 @@ Icon=system-run
 Terminal=false
 Categories=Utility;
 StartupNotify=true
+StartupWMClass=io.github.commandpalette.CommandPalette

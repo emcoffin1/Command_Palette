@@ -17,4 +17,9 @@ sed "s|@APP_DIR@|$APP_DIR|g" "$SOURCE_DIR/packaging/command-palette" > "$BIN_HOM
 chmod 755 "$BIN_HOME/command-palette"
 sed "s|@BIN_HOME@|$BIN_HOME|g" "$SOURCE_DIR/packaging/io.github.commandpalette.CommandPalette.desktop" > "$DATA_HOME/applications/io.github.commandpalette.CommandPalette.desktop"
 sed "s|@BIN_HOME@|$BIN_HOME|g" "$SOURCE_DIR/packaging/command-palette-autostart.desktop" > "$CONFIG_HOME/autostart/command-palette.desktop"
+if command -v kbuildsycoca6 >/dev/null 2>&1; then
+    kbuildsycoca6 --noincremental >/dev/null 2>&1 || true
+elif command -v kbuildsycoca5 >/dev/null 2>&1; then
+    kbuildsycoca5 --noincremental >/dev/null 2>&1 || true
+fi
 printf '%s\n' "Installed. Assign $BIN_HOME/command-palette --toggle to a desktop global shortcut."

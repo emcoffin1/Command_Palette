@@ -16,6 +16,9 @@ from gi.repository import Gdk, Gio, GLib, Gtk
 
 APP_ID = "io.github.commandpalette.CommandPalette"
 ICON_NAME = "system-run"
+GLib.set_prgname(APP_ID)
+GLib.set_application_name("Command Palette")
+Gtk.Window.set_default_icon_name(ICON_NAME)
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_DIR = os.path.join(os.environ.get("XDG_CONFIG_HOME", os.path.expanduser("~/.config")), "command-palette")
 COMMAND_FILE = os.path.join(CONFIG_DIR, "commands.json")
